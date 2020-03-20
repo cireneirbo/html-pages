@@ -1,7 +1,8 @@
-beachImage {
+img {
     vertical-align: center;
 }
 p {
-    max-width: 200px;
+    max-width: 800;
+    min-width: 400;
     text-align: center;
 }
