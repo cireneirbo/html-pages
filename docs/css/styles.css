@@ -1,3 +1,7 @@
 beachImage {
-    align: middle;
+    vertical-align: middle;
+}
+body {
+    max-width: 750px;
+    text-align: middle;
 }
