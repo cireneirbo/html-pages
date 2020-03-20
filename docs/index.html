@@ -26,7 +26,11 @@
         let countDownTrue = false;
         for (let i = 0; i < countDown; i++) {
             //make a 3 second timer that prints a dot each iteration
-            console.log(".");
+            console.log(".\n");
+            //prints the following if statement after loop
+            if (i === countDown-1) {
+                countDownTrue = true;
+            }
         }
         if (countDownTrue === true) {
             console.log("This is the sort of thing that starts boss fights in video games, you know?...");
