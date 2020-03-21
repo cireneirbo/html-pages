@@ -25,7 +25,7 @@ function addElement () {
 function doFunction() {
     //go to next content selected from array with if statements var check
 
-    //alert('look at that function function!');
+    alert('look at that function function!');
     //let urlEnd = "index.html";
     /*if (countDownTrue === false) {
         console.log("This is the sort of thing that starts boss fights in video games, you know?...");
