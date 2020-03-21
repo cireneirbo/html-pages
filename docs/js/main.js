@@ -18,20 +18,15 @@ function doFunction() {
     //urlEnd = 
 //sends to     "https://cireneirbo.github.io/html-pages/" += urlEnd;
 
-if (page === 1) { 
-    <img src="images/hey-at-least-i-made-it.jfif" alt="nothing to see here" class="beachImage"> <br>should have stayed home</img>
-    <p class="story-text">
-        All must heed the warning of the soothsayer, Promethius. 
-        He spoke of times when the denizens of the warm rock, Earth, would take to the high seas amid the chaos of the scurrying feet.
-    </p>
-}
-if (page === 2) {
-    <img src="images/the-saddest-mascot.jfif" alt="nothing to see here" class="beachImage"> <br>it was only a matter of time</img>
-    <p class="story-text">
-        ...Of when he ventured out to the beach from within the crass cityscape. 
-        The solar accompaniment was visibly intense, and the partakers of sand-based ruminations were donning wide brims and colored glasses.
-    </p>
-}
+  // create a new div element 
+  var newDiv = document.createElement("div"); 
+  // and give it some content 
+  var newContent = document.createTextNode("Hi there and greetings!"); 
+  // add the text node to the newly created div
+  newDiv.appendChild(newContent);  
 
+  // add the newly created element and its content into the DOM 
+  var currentDiv = document.getElementById("div1"); 
+  document.body.insertBefore(newDiv, currentDiv); 
 
 }
