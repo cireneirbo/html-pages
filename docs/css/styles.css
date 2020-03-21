@@ -3,6 +3,6 @@ img {
 }
 p {
     max-width: 800;
-    min-width: 400;
+    min-width: border + 400;
     text-align: center;
 }
