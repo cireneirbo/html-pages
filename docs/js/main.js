@@ -4,20 +4,7 @@ let page = 0;
 
 
 
-document.body.onload = addElement;
 
-function addElement () { 
-  // create a new div element 
-  var newDiv = document.createElement("div"); 
-  // and give it some content 
-  var newContent = document.createTextNode("Hi there and greetings!"); 
-  // add the text node to the newly created div
-  newDiv.appendChild(newContent);  
-
-  // add the newly created element and its content into the DOM 
-  var currentDiv = document.getElementById("div1"); 
-  document.body.insertBefore(newDiv, currentDiv); 
-}
 
 
 
@@ -31,7 +18,20 @@ function doFunction() {
         console.log("This is the sort of thing that starts boss fights in video games, you know?...");
     }*/
     //countDownTrue = true; //trying to interact with in-line vars in index.html
+    document.body.onload = addElement;
 
+    function addElement () { 
+      // create a new div element 
+      var newDiv = document.createElement("div"); 
+      // and give it some content 
+      var newContent = document.createTextNode("Hi there and greetings!"); 
+      // add the text node to the newly created div
+      newDiv.appendChild(newContent);  
+    
+      // add the newly created element and its content into the DOM 
+      var currentDiv = document.getElementById("div1"); 
+      document.body.insertBefore(newDiv, currentDiv); 
+    }
 
 
 //does the if-ing
