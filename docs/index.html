@@ -20,7 +20,7 @@
 <body>
     <p id="shouting">hEyEyEy</p>
 
-
+    <p id="demo">here</p>
     <!-- scripts-->
     <script type = "text/javascript"  src = "js/main.js"></script>
     
@@ -37,8 +37,8 @@
 
 
         document.getElementById("shouting").addEventListener("click", clickFunction);
-        
-        document.getElementById("Progress").addEventListener("click",doFunction);
+        document.getElementById("Choose No").addEventListener("click", getLocation);
+        document.getElementById("Progress").addEventListener("click", doFunction);
 
         /*for (let i = 0; i < countDown; i++) {
             //make a 3 second timer that prints a dot each iteration
@@ -48,6 +48,29 @@
                 countDownTrue = true;
             }
         }*/
+        /*
+        let x = document.getElementById("demo");
+
+        function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+        }
+
+        function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude +
+        "<br>Altitude: " + position.coords.altitude;
+        }
+
+*/
+
+
+
+
+        //
         console.log("So, you just had to check the console, didn't you?...");
         let countDown = 3;
         let countDownTrue = false;

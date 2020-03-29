@@ -29,6 +29,7 @@ let clickFunction = function() {
 	} else if (document.body.style.backgroundColor !== 'blue') {
 		document.body.style.backgroundColor = 'blue'; 
 		document.getElementById("shouting").innerHTML = "blue";
+		
 	}
 }
 
@@ -56,7 +57,22 @@ let doFunction = function() {
 /*if (document.getElementsByTagName('b') > 1 ) { //searches for multiple existing <b> tag
 				document.removeChild(newContentBold);//deletes a choose yes or no statement if it exists
 			}*/
+			
 
+			function getLocation() {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition);
+				} else {
+					document.getElementById("demo").innerHTML = "Geolocation is not supported by this browser.";
+				}
+			}
+	
+			function showPosition(position) {
+				document.getElementById("demo").innerHTML = "Latitude: " + position.coords.latitude +
+				"<br>Longitude: " + position.coords.longitude +
+				"<br>Retrieved: " + Date(position.timestamp) +
+				"<br>Return the protocol, hostname and port number of a URL: " + location.origin;
+			}
 
 
 /*
