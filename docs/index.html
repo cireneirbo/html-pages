@@ -18,7 +18,8 @@
     
 </head>
 <body>
-
+    <p id="shouting">hEyEyEy</p>
+    <p id="p1"></p>
 
 <!--
     <img src="images/hey-at-least-i-made-it.jfif" alt="nothing to see here" class="beachImage"> <br>should have stayed home</img>
@@ -63,6 +64,17 @@
         console.log("So, you just had to check the console, didn't you?...");
         let countDown = 5;
         let countDownTrue = false;
+
+        document.addEventListener("click", clickFunction);
+/*
+        let clickFunction = function() {
+            //document.getElementById("shouting").innerhtml = "hi"; //doFunction();
+            if (document.body.style.backgroundColor !== 'red') {
+                document.body.style.backgroundColor = 'red'; 
+            } if (document.body.style.backgroundColor !== 'blue') {
+                document.body.style.backgroundColor = 'blue'; 
+            }
+        }*/
         /*for (let i = 0; i < countDown; i++) {
             //make a 3 second timer that prints a dot each iteration
             console.log(".");

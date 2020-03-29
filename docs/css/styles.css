@@ -6,3 +6,6 @@ p {
     min-width: border + 400;
     text-align: center;
 }
+#p1 {
+    font-size: 16px;
+}

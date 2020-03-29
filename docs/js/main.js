@@ -21,40 +21,24 @@ function selectYes () {
 	decision = 1;//if true
 }
 
-function doFunction() {
-	/*
-	//<img src="images/hey-at-least-i-made-it.jfif" alt="nothing to see here" class="beachImage"> <br>should have stayed home</img>
-	let sen1 = "t";
-	let sen2 = "-shirt";
-	
-	if (storyPos === 0){
-		sen1 = "All must heed the warning of the soothsayer, Promethius.\n";
-		sen2 = "He spoke of times when the denizens of the warm rock, Earth, would take to the high seas amid the chaos of the scurrying feet.";
-    } if (storyPos === 1){
-		sen1 = "All must heed the warning of the soothsayer, Promethius.\n";
-		sen2 = "He spoke of times when the denizens of the warm rock, Earth, would take to the high seas amid the chaos of the scurrying feet.";
-    } else {
-		sen1 = "nothing ";
-		sen2 = "to see here";
+let clickFunction = function() {
+	//document.getElementById("shouting").innerhtml = "hi"; //doFunction();
+	if (document.body.style.backgroundColor !== 'red') {
+		document.body.style.backgroundColor = 'red'; 
+		document.getElementById("shouting").innerHTML = "red";
+	} else if (document.body.style.backgroundColor !== 'blue') {
+		document.body.style.backgroundColor = 'blue'; 
+		document.getElementById("shouting").innerHTML = "blue";
 	}
-	//combine the text package
-	let textContent = sen1+sen2;
-	*/
+}
+
+function doFunction() {
 	//story beginning, no input needed
 	if (storyPos < 12) {
 		//call data from array index, only when a string is there
 		if (typeof choiceArray[storyPos] === 'string'){ 
-		// create a new p element 
-		let newPar = document.createElement("p"); 
-		// and give it some content 
-		let newContent = document.createTextNode(choiceArray[storyPos]); 
-		// add the text node to the newly created p
-		newPar.appendChild(newContent);  
-
-		// add the newly created element and its content into the DOM 
-		let currentPar = document.getElementById("p1"); 
-		document.body.insertBefore(newPar, currentPar); 
-		storyPos += 1;//changes the text to next part of story
+			document.getElementById("p1").innerHTML = choiceArray[storyPos];
+			storyPos += 1;//changes the text to next part of story
 		}
 	} else { //need input now
 		 if (decision === 0 || decision === 1){ //player has chosen an input
@@ -66,26 +50,9 @@ function doFunction() {
 		} else { 
 			//player needs to choose input
 			alert('pick yes or no to continue'); 
-            /*
-            */
-			// create a new b element 
-			let newBold = document.createElement("b"); 
-			  // and give it some content 
-			let newContentBold = document.createTextNode("Choose Yes or No"); 
-			// add the text node to the newly created p
-			newBold.appendChild(newContentBold);  
-			
-			if (document.getElementsByTagName('b') > 1) { //searches for multiple existing <b> tag
-				document.removeChild(newContentBold);//deletes a choose yes or no statement if it exists
-			}
-			// add the newly created element and its content into the DOM 
-			let currentBold = document.getElementById("b1"); 
-			document.body.insertBefore(newBold, currentBold); 
-            /*
-            */
-			
 		}
 	}
+}
 /*if (document.getElementsByTagName('b') > 1 ) { //searches for multiple existing <b> tag
 				document.removeChild(newContentBold);//deletes a choose yes or no statement if it exists
 			}*/
@@ -107,7 +74,7 @@ function doFunction() {
 	  
 
     
-}
+
 	
 	
 	
