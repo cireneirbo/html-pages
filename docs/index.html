@@ -21,39 +21,11 @@
     <p id="shouting">hEyEyEy</p>
     <p id="p1"></p>
 
-<!--
-    <img src="images/hey-at-least-i-made-it.jfif" alt="nothing to see here" class="beachImage"> <br>should have stayed home</img>
-    <p class="story-text">
-        All must heed the warning of the soothsayer, Promethius. 
-        He spoke of times when the denizens of the warm rock, Earth, would take to the high seas amid the chaos of the scurrying feet.
-    </p>
-
-    <img src="images/the-saddest-mascot.jfif" alt="nothing to see here" class="beachImage"> <br>it was only a matter of time</img>
-    <p class="story-text">
-        ...Of when he ventured out to the beach from within the crass cityscape. 
-        The solar accompaniment was visibly intense, and the partakers of sand-based ruminations were donning wide brims and colored glasses.
-    </p>
-    <img src="images/hey-at-least-i-made-it.jfif" alt="nothing to see here" class="beachImage"> <br>should have stayed home</img>
-    <p class="story-text">
-        The wind swept up particulates that agitated the soothsayer's humble and vulnerable eyes.
-        So, there, on the arid cousin to the mighty expanse of soothing sustainance, he fell to his knees and cried out for aid.
-    </p>
-    <img src="images/hey-at-least-i-made-it.jfif" alt="nothing to see here" class="beachImage"> <br>should have stayed home</img>
-    <p class="story-text">
-        But, aid was not offered, nor did it come. 
-        So on that sandy spot, he ravaged his sight with incessant pawing and rubbing. 
-    </p>
-    <img src="images/hey-at-least-i-made-it.jfif" alt="nothing to see here" class="beachImage"> <br>should have stayed home</img>
-    <p class="story-text">
-        In time, the agitants fell free with his tortured tears, and glorious sight was restored.
-        Upon glimpsing the all-encompassing warble of the blue-green swill before him, he stood and became transfixed on the impossibly far horizon.
-    </p>
--->
     <!-- scripts-->
     <script type = "text/javascript"  src = "js/main.js"></script>
     
     <!--button click scripts-->
-    <input id="Progress" type="button" value="Progress" onclick="doFunction();" />
+    <input id="Progress" type="button" value="Progress"/> <!---onclick="doFunction();"--->
 	<br>
 	<input id="Choose No" type="button" value="Choose No" onclick="selectNo();" />
 	<br>
@@ -66,26 +38,31 @@
         let countDownTrue = false;
 
         document.addEventListener("click", clickFunction);
-/*
-        let clickFunction = function() {
-            //document.getElementById("shouting").innerhtml = "hi"; //doFunction();
-            if (document.body.style.backgroundColor !== 'red') {
-                document.body.style.backgroundColor = 'red'; 
-            } if (document.body.style.backgroundColor !== 'blue') {
-                document.body.style.backgroundColor = 'blue'; 
-            }
-        }*/
+        document.getElementById("Progress").addEventListener("click",doFunction);
+
         /*for (let i = 0; i < countDown; i++) {
             //make a 3 second timer that prints a dot each iteration
-            console.log(".");
+            setTimeout(function(){console.log("."); },2000);
             //prints the following if statement after loop
             if (i === (countDown-1)) {
                 countDownTrue = true;
             }
         }*/
-        /*if (countDownTrue === true) {
-            console.log("This is the sort of thing that starts boss fights in video games, you know?...");
-        }*/
+        let periodString = '';
+            //make a 3 second timer that prints a dot each iteration
+            while (countDown > 0) {
+                countDown -= 1;
+                periodString += '.';
+                setTimeout(function(){console.log(periodString); },3000);
+                
+            }
+            
+            //prints the following if statement after loop
+            if (countDown <= 0) {
+                console.log("This is the sort of thing that starts boss fights in video games, you know?...");
+            }
+        
+        
     </script>
 
 

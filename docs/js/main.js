@@ -32,7 +32,7 @@ let clickFunction = function() {
 	}
 }
 
-function doFunction() {
+let doFunction = function() {
 	//story beginning, no input needed
 	if (storyPos < 12) {
 		//call data from array index, only when a string is there
