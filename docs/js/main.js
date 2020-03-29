@@ -11,6 +11,16 @@ const choiceArray = [ "All must heed the warning of the soothsayer, Promethius."
 "It was at this irrefutable time that you woke up.",
 "The sun is shining, the traffic is flowing intermitantly outside your window, and you feel a pressing need to venture forth to the beach." ]; //array to push all site pages to
 
+const imageArray = [ "dauchsand.jfif",
+"high-seas.jfif",
+"the-saddest-mascot.jfif"
+
+
+
+
+
+];
+
 let storyPos = 0;
 let decision = 2;
 //reacts to choice clicks
@@ -75,9 +85,11 @@ let doFunction = function() {
 				"<br>Port: " + location.port + 
 				"<br> location.hash" + (location.hash = 'page 1');
 			}
-
-			if (location.hash === "page 1") {
-				document.getElementById("image") = <img src="images/red-shirt-lost-on-beach.jfif" alt="system failure">page 1</img>;
+			function postImage(){
+				//if (location.hash === "page%201") {
+					//document.getElementById("image").setAttribute("src" ,"images/red-shirt-lost-on-beach.jfif");
+					document.getElementById("image").setAttribute("src" ,"images/"+imageArray[storyPos]);
+				//}
 			}
 
 /*

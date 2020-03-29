@@ -20,8 +20,9 @@
 <body>
     <p id="shouting">hEyEyEy</p>
 
-    <p id="demo">here</p>
-    <img src="" id="image">placeholder</img>
+    <p id="demo" class="positioned">here</p>
+    
+    <br>
     
     <!-- scripts-->
     <script type = "text/javascript"  src = "js/main.js"></script>
@@ -40,6 +41,7 @@
 
         document.getElementById("shouting").addEventListener("click", clickFunction);
         document.getElementById("Choose No").addEventListener("click", getLocation);
+        document.getElementById("Progress").addEventListener("click", postImage);
         document.getElementById("Progress").addEventListener("click", doFunction);
 
         /*for (let i = 0; i < countDown; i++) {
@@ -104,7 +106,7 @@
     <br>
     <br>
     <p id="p1"></p>
-
+    <img src="images/path-to-beach.jfif" id="image" alt="failed load"></img>
 
 
 </body>

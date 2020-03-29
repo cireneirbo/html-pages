@@ -1,5 +1,9 @@
 img {
     vertical-align: center;
+    align: center;
+    max-width: 1280px;
+    max-height: 7200px;
+
 }
 p {
     max-width: 800;
@@ -9,3 +13,9 @@ p {
 #p1 {
     font-size: 16px;
 }
+.positioned {
+    position: relative;
+    background: yellow;
+    top: 30px;
+    left: 30px;
+  }
