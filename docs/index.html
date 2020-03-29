@@ -19,12 +19,13 @@
 </head>
 <body>
     <p id="shouting">hEyEyEy</p>
-    <p id="p1"></p>
+
 
     <!-- scripts-->
     <script type = "text/javascript"  src = "js/main.js"></script>
     
     <!--button click scripts-->
+
     <input id="Progress" type="button" value="Progress"/> <!---onclick="doFunction();"--->
 	<br>
 	<input id="Choose No" type="button" value="Choose No" onclick="selectNo();" />
@@ -33,11 +34,10 @@
 
     <!--- In-line Script-->
     <script>
-        console.log("So, you just had to check the console, didn't you?...");
-        let countDown = 5;
-        let countDownTrue = false;
+
 
         document.addEventListener("click", clickFunction);
+        
         document.getElementById("Progress").addEventListener("click",doFunction);
 
         /*for (let i = 0; i < countDown; i++) {
@@ -48,23 +48,37 @@
                 countDownTrue = true;
             }
         }*/
+        console.log("So, you just had to check the console, didn't you?...");
+        let countDown = 3;
+        let countDownTrue = false;
+
         let periodString = '';
+
+        let consoleFunction = function(counter) {
             //make a 3 second timer that prints a dot each iteration
-            while (countDown > 0) {
-                countDown -= 1;
+            if (counter > 0) {
+                counter -= 1;
                 periodString += '.';
-                setTimeout(function(){console.log(periodString); },3000);
+                console.log(periodString);
+                consoleFunction(counter); //recursion
                 
+            } else{
+                return console.log("This is the sort of thing that starts boss fights in video games, you know...");
             }
-            
-            //prints the following if statement after loop
-            if (countDown <= 0) {
-                console.log("This is the sort of thing that starts boss fights in video games, you know?...");
-            }
+        }
+        consoleFunction(countDown);
         
         
     </script>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p id="p1"></p>
 
 
 
