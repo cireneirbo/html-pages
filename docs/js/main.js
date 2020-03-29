@@ -71,9 +71,14 @@ let doFunction = function() {
 				document.getElementById("demo").innerHTML = "Latitude: " + position.coords.latitude +
 				"<br>Longitude: " + position.coords.longitude +
 				"<br>Retrieved: " + Date(position.timestamp) +
-				"<br>Return the protocol, hostname and port number of a URL: " + location.origin;
+				"<br><br>URL: " + location.origin +
+				"<br>Port: " + location.port + 
+				"<br> location.hash" + (location.hash = 'page 1');
 			}
 
+			if (location.hash === "page 1") {
+				document.getElementById("image") = <img src="images/red-shirt-lost-on-beach.jfif" alt="system failure">page 1</img>;
+			}
 
 /*
 	  // create a new img element 
