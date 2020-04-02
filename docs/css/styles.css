@@ -10,12 +10,12 @@ p {
     min-width: border + 400;
     text-align: center;
 }
-#p1 {
+#p1 { /*id is called with # */
     font-size: 16px;
 }
-.positioned {
+.positioned { /*class is called with . */
     position: relative;
     background: yellow;
     top: 30px;
-    left: 30px;
+    left: 30px; /*comments*/
   }
